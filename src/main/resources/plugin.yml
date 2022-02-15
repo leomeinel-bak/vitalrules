@@ -1,33 +1,33 @@
-name: VitalRules
+name: VitalFly
 version: @version@
-main: com.tamrielnetwork.vitalrules.VitalRules
+main: com.tamrielnetwork.vitalfly.VitalFly
 api-version: 1.17
 authors: [ Tamriel Network ]
 website: https://tamriel.site
 description: Gives you the ability to fly and toggle fly speed.
 commands:
-  vitalrules:
+  vitalfly:
     description: "Main command"
-    usage: "/vitalrules"
+    usage: "/vitalfly"
 permissions:
-  vitalrules.fly:
+  vitalfly.fly:
     description: "Permission to toggle fly"
     default: op
-  vitalrules.fly.others:
+  vitalfly.fly.others:
     description: "Permission to toggle fly for other players"
     default: op
-  vitalrules.flyspeed:
+  vitalfly.flyspeed:
     description: "Permission to set flyspeed"
     default: op
-  vitalrules.flyspeed.others:
+  vitalfly.flyspeed.others:
     description: "Permission to set flyspeed for other players"
     default: op
-  vitalrules.fly.worldchange:
+  vitalfly.fly.worldchange:
     description: "Permission to keep fly on worldchange"
     default: op
-  vitalrules.fly.gamemodechange:
+  vitalfly.fly.gamemodechange:
     description: "Permission to keep fly on gamemodechange"
     default: op
-  vitalrules.fly.login:
+  vitalfly.fly.login:
     description: "Permission to keep fly on login"
     default: op
