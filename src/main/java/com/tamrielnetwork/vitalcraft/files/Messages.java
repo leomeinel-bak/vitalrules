@@ -1,5 +1,5 @@
 /*
- * VitalRules is a Spigot Plugin that gives players the ability to see server rules.
+ * VitalCraft is a Spigot Plugin that gives players the ability to open a crafting interface.
  * Copyright © 2022 Leopold Meinel
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,29 +13,12 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE
+ * along with this program. If not, see https://github.com/TamrielNetwork/VitalCraft/blob/main/LICENSE
  */
 
-/*
- VitalRules is a Spigot Plugin that gives players the ability to see server rules.
- Copyright (C) 2022  Leopold Meinel
+package com.tamrielnetwork.vitalcraft.files;
 
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License
- along with this program. If not, see https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE.
- */
-package com.tamrielnetwork.vitalrules.files;
-
-import com.tamrielnetwork.vitalrules.VitalRules;
+import com.tamrielnetwork.vitalcraft.VitalCraft;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -44,7 +27,7 @@ import java.io.File;
 
 public class Messages {
 
-	private final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
+	private final VitalCraft main = JavaPlugin.getPlugin(VitalCraft.class);
 	private final File messagesFile;
 	private final FileConfiguration messagesConf;
 
