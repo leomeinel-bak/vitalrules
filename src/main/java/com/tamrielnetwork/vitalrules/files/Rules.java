@@ -16,35 +16,38 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.files;
+package com.tamrielnetwork.vitalrules.files;
 
-import com.tamrielnetwork.vitalcraft.VitalCraft;
+import com.tamrielnetwork.vitalrules.VitalRules;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
-public class Messages {
+public class Rules {
 
-	private final VitalCraft main = JavaPlugin.getPlugin(VitalCraft.class);
-	private final File messagesFile;
-	private final FileConfiguration messagesConf;
+	private final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
+	private final File rulesFile;
+	private final FileConfiguration rulesConf;
 
-	public Messages() {
-		messagesFile = new File(main.getDataFolder(), "messages.yml");
-		saveMessagesFile();
-		messagesConf = YamlConfiguration.loadConfiguration(messagesFile);
+	public Rules() {
+
+		rulesFile = new File(main.getDataFolder(), "rules.yml");
+		saveRulesFile();
+		rulesConf = YamlConfiguration.loadConfiguration(rulesFile);
 	}
 
-	private void saveMessagesFile() {
-		if (!messagesFile.exists()) {
-			main.saveResource("messages.yml", false);
+	private void saveRulesFile() {
+
+		if (!rulesFile.exists()) {
+			main.saveResource("rules.yml", false);
 		}
 	}
 
-	public FileConfiguration getMessagesConf() {
-		return messagesConf;
+	public FileConfiguration getRulesConf() {
+
+		return rulesConf;
 	}
 
 }

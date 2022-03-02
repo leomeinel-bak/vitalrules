@@ -16,35 +16,57 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.commands;
+package com.tamrielnetwork.vitalrules.commands;
 
-import com.tamrielnetwork.vitalcraft.utils.commands.Cmd;
+import com.tamrielnetwork.vitalrules.utils.Chat;
+import com.tamrielnetwork.vitalrules.utils.commands.Cmd;
+import com.tamrielnetwork.vitalrules.utils.commands.CmdSpec;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class VitalCraftCmd implements CommandExecutor {
+public class VitalRulesCmd implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
-		if (Cmd.isArgsLengthNotEqualTo(sender, args, 0)) {
+		if (Cmd.isArgsLengthGreaterThan(sender, args, 1)) {
 			return true;
 		}
-		doCraft(sender);
+		if (Cmd.isArgsLengthNotEqualTo(sender, args, 0)) {
+			doRules(sender, args[0]);
+			return true;
+		}
+		doRules(sender);
 		return true;
 
 	}
 
-	private void doCraft(@NotNull CommandSender sender) {
-		Player senderPlayer = (Player) sender;
+	private void doRules(@NotNull CommandSender sender, String arg) {
 
-		if (Cmd.isInvalidSender(sender) || Cmd.isNotPermitted(sender, "vitalcraft.craft")) {
+		if (Cmd.isNotPermitted(sender, "vitalrules.rules")) {
 			return;
 		}
-		senderPlayer.openWorkbench(senderPlayer.getLocation(), true);
+
+		if (CmdSpec.isInvalidNumber(sender, arg)) {
+			return;
+		}
+
+		int page = Integer.parseInt(arg);
+
+		Chat.sendMessage(sender, page);
 
 	}
+
+	private void doRules(@NotNull CommandSender sender) {
+
+		if (Cmd.isNotPermitted(sender, "vitalrules.rules")) {
+			return;
+		}
+
+		Chat.sendMessage(sender, 1);
+
+	}
+
 }

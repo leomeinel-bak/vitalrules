@@ -16,35 +16,26 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.utils.commands;
+package com.tamrielnetwork.vitalrules.utils.commands;
 
-import com.tamrielnetwork.vitalcraft.utils.Chat;
+import com.tamrielnetwork.vitalrules.utils.Chat;
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class Cmd {
-	public static boolean isArgsLengthNotEqualTo(@NotNull CommandSender sender, @NotNull String[] args, int length) {
-		if (args.length != length) {
-			Chat.sendMessage(sender, "cmd");
+public class CmdSpec {
+
+	public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
+
+		if (!StringUtils.isNumeric(arg)) {
+			Chat.sendMessage(sender, "invalid-rule");
+			return true;
+		}
+		if (Integer.parseInt(arg) <= 0) {
+			Chat.sendMessage(sender, "invalid-rule");
 			return true;
 		}
 		return false;
 	}
 
-	public static boolean isNotPermitted(@NotNull CommandSender sender, @NotNull String perm) {
-		if (!sender.hasPermission(perm)) {
-			Chat.sendMessage(sender, "no-perms");
-			return true;
-		}
-		return false;
-	}
-
-	public static boolean isInvalidSender(@NotNull CommandSender sender) {
-		if (!(sender instanceof Player)) {
-			Chat.sendMessage(sender, "player-only");
-			return true;
-		}
-		return false;
-	}
 }

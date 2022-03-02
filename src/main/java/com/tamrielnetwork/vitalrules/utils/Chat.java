@@ -16,25 +16,60 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.utils;
+package com.tamrielnetwork.vitalrules.utils;
 
-import com.tamrielnetwork.vitalcraft.VitalCraft;
+import com.tamrielnetwork.vitalrules.VitalRules;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class Chat {
 
-	private static final VitalCraft main = JavaPlugin.getPlugin(VitalCraft.class);
+	private static final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
+
+	public static void sendMessage(@NotNull CommandSender player, int page) {
+
+		List<String> messages = getMessages(player, page);
+		if (messages == null) {
+			return;
+		}
+		for (String string : messages) {
+			player.sendMessage(replaceColors(string));
+		}
+	}
 
 	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
+
 		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages().getMessagesConf().getString(message))));
 	}
 
+	private static List<String> getMessages(@NotNull CommandSender player, int page) {
+
+		Set<String> keys = main.getRules().getRulesConf().getKeys(false);
+		List<List<String>> messagesList = new ArrayList<>();
+
+		for (String key : keys) {
+			List<String> temp = main.getRules().getRulesConf().getStringList(key);
+			messagesList.add(temp);
+		}
+		if (page >= messagesList.size() + 1) {
+			sendMessage(player, "invalid-rule");
+			return null;
+		}
+		player.sendMessage("");
+		player.sendMessage(replaceColors("&5Page &d" + page + "&5/&d" + messagesList.size()));
+		player.sendMessage("");
+		return messagesList.get(page - 1);
+	}
+
 	public static String replaceColors(@NotNull String string) {
+
 		return ChatColor.translateAlternateColorCodes('&', string);
 	}
 
