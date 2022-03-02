@@ -93,13 +93,22 @@ To get the plugin running on your server follow these simple steps.
 ```
 player-only: "&cThis command can only be executed by players!"
 no-perms: "&7You don't have enough permissions!"
-cmd: ""
-
-rules:
-  - ""
-  - ""
+cmd: "invalid cmd"
+invalid-rule: "invalid rule"
 ```
 
+### Configuration - rules.yml
+
+```
+1:
+  - "&b&lExample Heading"
+  - ""
+  - "&7Example Text"
+2:
+  - "&b&lExample Heading 2"
+  - ""
+  - "&7Example Text"
+```
 <!-- ROADMAP -->
 
 ## Roadmap
