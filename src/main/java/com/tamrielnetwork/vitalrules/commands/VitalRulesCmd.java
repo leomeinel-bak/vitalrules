@@ -45,11 +45,7 @@ public class VitalRulesCmd implements CommandExecutor {
 
 	private void doRules(@NotNull CommandSender sender, String arg) {
 
-		if (Cmd.isNotPermitted(sender, "vitalrules.rules")) {
-			return;
-		}
-
-		if (CmdSpec.isInvalidNumber(sender, arg)) {
+		if (CmdSpec.isInvalidCmd(sender, arg, "vitalrules.rules")) {
 			return;
 		}
 

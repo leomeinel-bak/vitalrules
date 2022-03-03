@@ -85,7 +85,7 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalrules.rules`
 
-* Command: `/vitalrules`
+* Command: `/rules`
 * Description: See server rules
 
 ### Configuration - messages.yml
@@ -109,6 +109,7 @@ invalid-rule: "invalid rule"
   - ""
   - "&7Example Text"
 ```
+
 <!-- ROADMAP -->
 
 ## Roadmap

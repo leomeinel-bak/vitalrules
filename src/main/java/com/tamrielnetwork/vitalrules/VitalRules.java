@@ -34,7 +34,7 @@ public final class VitalRules extends JavaPlugin {
 	@Override
 	public void onEnable() {
 
-		Objects.requireNonNull(getCommand("vitalrules")).setExecutor(new VitalRulesCmd());
+		Objects.requireNonNull(getCommand("rules")).setExecutor(new VitalRulesCmd());
 
 		messages = new Messages();
 		rules = new Rules();

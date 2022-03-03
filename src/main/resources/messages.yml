@@ -1,4 +1,3 @@
-player-only: "&cThis command can only be executed by players!"
+cmd: "&fUsage: &b/rules <page>"
 no-perms: "&7You don't have enough permissions!"
-cmd: "invalid cmd"
-invalid-rule: "invalid rule"
+invalid-rule: "&cInvalid rule!"

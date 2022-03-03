@@ -38,4 +38,13 @@ public class CmdSpec {
 		return false;
 	}
 
+	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg, @NotNull String perm) {
+
+		if (Cmd.isNotPermitted(sender, perm)) {
+			return true;
+		}
+
+		return isInvalidNumber(sender, arg);
+	}
+
 }

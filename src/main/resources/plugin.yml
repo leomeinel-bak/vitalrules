@@ -6,9 +6,9 @@ authors: [ Tamriel Network ]
 website: https://tamriel.site
 description: Gives players the ability to see server rules.
 commands:
-  vitalrules:
+  rules:
     description: "Main command"
-    usage: "/vitalrules"
+    usage: "/rules"
 permissions:
   vitalrules.rules:
     description: "Permission to see server rules"
