@@ -25,18 +25,23 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 public class Chat {
 
+	private Chat() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	private static final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
 
 	public static void sendMessage(@NotNull CommandSender player, int page) {
 
 		List<String> messages = getMessages(player, page);
-		if (messages == null) {
+		if (messages.isEmpty()) {
 			return;
 		}
 		for (String string : messages) {
@@ -60,7 +65,7 @@ public class Chat {
 		}
 		if (page >= messagesList.size() + 1) {
 			sendMessage(player, "invalid-rule");
-			return null;
+			return Collections.emptyList();
 		}
 		player.sendMessage("");
 		player.sendMessage(replaceColors("&5Page &d" + page + "&5/&d" + messagesList.size()));
