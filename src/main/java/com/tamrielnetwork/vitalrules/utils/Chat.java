@@ -32,11 +32,12 @@ import java.util.Set;
 
 public class Chat {
 
+	private static final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
+
 	private Chat() {
+
 		throw new IllegalStateException("Utility class");
 	}
-
-	private static final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
 
 	public static void sendMessage(@NotNull CommandSender player, int page) {
 

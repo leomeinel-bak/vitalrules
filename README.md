@@ -45,7 +45,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#commands-and-permissions">Commands and Permissions</a></li>
-        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#configuration - messages.yml">Configuration</a></li>
+		<li><a href="#configuration - rules.yml">Configuration</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -85,16 +86,15 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalrules.rules`
 
-* Command: `/rules`
+* Command: `/rules <page>`
 * Description: See server rules
 
 ### Configuration - messages.yml
 
 ```
-player-only: "&cThis command can only be executed by players!"
+cmd: "&fUsage: &b/rules <page>"
 no-perms: "&7You don't have enough permissions!"
-cmd: "invalid cmd"
-invalid-rule: "invalid rule"
+invalid-rule: "&cInvalid rule!"
 ```
 
 ### Configuration - rules.yml
