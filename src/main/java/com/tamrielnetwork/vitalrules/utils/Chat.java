@@ -35,12 +35,10 @@ public class Chat {
 	private static final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
 
 	private Chat() {
-
 		throw new IllegalStateException("Utility class");
 	}
 
 	public static void sendMessage(@NotNull CommandSender player, int page) {
-
 		List<String> messages = getMessages(player, page);
 		if (messages.isEmpty()) {
 			return;
@@ -51,17 +49,20 @@ public class Chat {
 	}
 
 	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
-
-		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages().getMessagesConf().getString(message))));
+		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages()
+		                                                            .getMessagesConf()
+		                                                            .getString(message))));
 	}
 
 	private static List<String> getMessages(@NotNull CommandSender player, int page) {
-
-		Set<String> keys = main.getRules().getRulesConf().getKeys(false);
+		Set<String> keys = main.getRules()
+		                       .getRulesConf()
+		                       .getKeys(false);
 		List<List<String>> messagesList = new ArrayList<>();
-
 		for (String key : keys) {
-			List<String> temp = main.getRules().getRulesConf().getStringList(key);
+			List<String> temp = main.getRules()
+			                        .getRulesConf()
+			                        .getStringList(key);
 			messagesList.add(temp);
 		}
 		if (page >= messagesList.size() + 1) {
@@ -75,8 +76,6 @@ public class Chat {
 	}
 
 	public static String replaceColors(@NotNull String string) {
-
 		return ChatColor.translateAlternateColorCodes('&', string);
 	}
-
 }

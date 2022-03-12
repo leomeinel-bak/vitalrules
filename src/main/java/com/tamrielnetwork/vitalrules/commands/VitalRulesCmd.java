@@ -26,11 +26,12 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
-public class VitalRulesCmd implements CommandExecutor {
+public class VitalRulesCmd
+		implements CommandExecutor {
 
 	@Override
-	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-
+	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,
+	                         @NotNull String[] args) {
 		if (Cmd.isArgsLengthGreaterThan(sender, args, 1)) {
 			return false;
 		}
@@ -40,29 +41,20 @@ public class VitalRulesCmd implements CommandExecutor {
 		}
 		doRules(sender);
 		return true;
-
 	}
 
 	private void doRules(@NotNull CommandSender sender, String arg) {
-
 		if (CmdSpec.isInvalidCmd(sender, arg, "vitalrules.rules")) {
 			return;
 		}
-
 		int page = Integer.parseInt(arg);
-
 		Chat.sendMessage(sender, page);
-
 	}
 
 	private void doRules(@NotNull CommandSender sender) {
-
 		if (Cmd.isNotPermitted(sender, "vitalrules.rules")) {
 			return;
 		}
-
 		Chat.sendMessage(sender, 1);
-
 	}
-
 }

@@ -26,12 +26,10 @@ import org.jetbrains.annotations.NotNull;
 public class CmdSpec {
 
 	private CmdSpec() {
-
 		throw new IllegalStateException("Utility class");
 	}
 
 	public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-
 		if (!StringUtils.isNumeric(arg)) {
 			Chat.sendMessage(sender, "invalid-rule");
 			return true;
@@ -44,12 +42,9 @@ public class CmdSpec {
 	}
 
 	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg, @NotNull String perm) {
-
 		if (Cmd.isNotPermitted(sender, perm)) {
 			return true;
 		}
-
 		return isInvalidNumber(sender, arg);
 	}
-
 }

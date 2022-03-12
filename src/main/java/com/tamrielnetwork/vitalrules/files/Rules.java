@@ -32,22 +32,18 @@ public class Rules {
 	private final FileConfiguration rulesConf;
 
 	public Rules() {
-
 		rulesFile = new File(main.getDataFolder(), "rules.yml");
 		saveRulesFile();
 		rulesConf = YamlConfiguration.loadConfiguration(rulesFile);
 	}
 
 	private void saveRulesFile() {
-
 		if (!rulesFile.exists()) {
 			main.saveResource("rules.yml", false);
 		}
 	}
 
 	public FileConfiguration getRulesConf() {
-
 		return rulesConf;
 	}
-
 }

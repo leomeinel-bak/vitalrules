@@ -26,41 +26,44 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public final class VitalRules extends JavaPlugin {
+public final class VitalRules
+		extends JavaPlugin {
 
 	private Messages messages;
 	private Rules rules;
 
 	@Override
 	public void onEnable() {
-
-		Objects.requireNonNull(getCommand("rules")).setExecutor(new VitalRulesCmd());
-
+		Objects.requireNonNull(getCommand("rules"))
+		       .setExecutor(new VitalRulesCmd());
 		messages = new Messages();
 		rules = new Rules();
-
-		Bukkit.getLogger().info("VitalRules v" + this.getDescription().getVersion() + " enabled");
-		Bukkit.getLogger().info("Copyright (C) 2022 Leopold Meinel");
-		Bukkit.getLogger().info("This program comes with ABSOLUTELY NO WARRANTY!");
-		Bukkit.getLogger().info("This is free software, and you are welcome to redistribute it under certain conditions.");
-		Bukkit.getLogger().info("See https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE for more details.");
+		Bukkit.getLogger()
+		      .info("VitalRules v" + this.getDescription()
+		                                 .getVersion() + " enabled");
+		Bukkit.getLogger()
+		      .info("Copyright (C) 2022 Leopold Meinel");
+		Bukkit.getLogger()
+		      .info("This program comes with ABSOLUTELY NO WARRANTY!");
+		Bukkit.getLogger()
+		      .info("This is free software, and you are welcome to redistribute it under certain conditions.");
+		Bukkit.getLogger()
+		      .info("See https://github.com/TamrielNetwork/VitalRules/blob/main/LICENSE for more details.");
 	}
 
 	@Override
 	public void onDisable() {
-
-		Bukkit.getLogger().info("VitalRules v" + this.getDescription().getVersion() + " disabled");
+		Bukkit.getLogger()
+		      .info("VitalRules v" + this.getDescription()
+		                                 .getVersion() + " disabled");
 	}
 
 	public Messages getMessages() {
-
 		return messages;
 	}
 
 	public Rules getRules() {
-
 		return rules;
 	}
-
 }
 
