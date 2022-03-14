@@ -29,6 +29,10 @@ public class CmdSpec {
 		throw new IllegalStateException("Utility class");
 	}
 
+	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg, @NotNull String perm) {
+		return Cmd.isNotPermitted(sender, perm) || isInvalidNumber(sender, arg);
+	}
+
 	public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
 		if (!StringUtils.isNumeric(arg)) {
 			Chat.sendMessage(sender, "invalid-rule");
@@ -39,12 +43,5 @@ public class CmdSpec {
 			return true;
 		}
 		return false;
-	}
-
-	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg, @NotNull String perm) {
-		if (Cmd.isNotPermitted(sender, perm)) {
-			return true;
-		}
-		return isInvalidNumber(sender, arg);
 	}
 }
