@@ -34,11 +34,7 @@ public class CmdSpec {
 	}
 
 	public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-		if (!StringUtils.isNumeric(arg)) {
-			Chat.sendMessage(sender, "invalid-rule");
-			return true;
-		}
-		if (Integer.parseInt(arg) <= 0) {
+		if (!StringUtils.isNumeric(arg) || Integer.parseInt(arg) <= 0) {
 			Chat.sendMessage(sender, "invalid-rule");
 			return true;
 		}
