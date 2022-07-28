@@ -16,11 +16,11 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalrules.commands;
+package dev.meinel.leo.vitalrules.commands;
 
-import com.tamrielnetwork.vitalrules.utils.Chat;
-import com.tamrielnetwork.vitalrules.utils.commands.Cmd;
-import com.tamrielnetwork.vitalrules.utils.commands.CmdSpec;
+import dev.meinel.leo.vitalrules.utils.Chat;
+import dev.meinel.leo.vitalrules.utils.commands.Cmd;
+import dev.meinel.leo.vitalrules.utils.commands.CmdSpec;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

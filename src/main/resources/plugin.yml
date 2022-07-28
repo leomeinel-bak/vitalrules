@@ -1,6 +1,6 @@
 name: VitalRules
 version: @version@
-main: com.tamrielnetwork.vitalrules.VitalRules
+main: dev.meinel.leo.vitalrules.VitalRules
 api-version: 1.17
 authors: [ Leopold Meinel ]
 description: Gives players the ability to see server rules.

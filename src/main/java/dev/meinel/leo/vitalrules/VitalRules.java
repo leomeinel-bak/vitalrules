@@ -16,11 +16,11 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalrules;
+package dev.meinel.leo.vitalrules;
 
-import com.tamrielnetwork.vitalrules.commands.VitalRulesCmd;
-import com.tamrielnetwork.vitalrules.files.Messages;
-import com.tamrielnetwork.vitalrules.files.Rules;
+import dev.meinel.leo.vitalrules.commands.VitalRulesCmd;
+import dev.meinel.leo.vitalrules.files.Messages;
+import dev.meinel.leo.vitalrules.files.Rules;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

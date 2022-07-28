@@ -16,42 +16,39 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalrules.utils.commands;
+package dev.meinel.leo.vitalrules.utils.commands;
 
-import com.tamrielnetwork.vitalrules.utils.Chat;
+import dev.meinel.leo.vitalrules.utils.Chat;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.stream.IntStream;
+public class Cmd {
 
-public class CmdSpec {
-
-	private CmdSpec() {
+	private Cmd() {
 		throw new IllegalStateException("Utility class");
 	}
 
-	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg, @NotNull String perm) {
-		return Cmd.isNotPermitted(sender, perm) || isInvalidNumber(sender, arg);
-	}
-
-	public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-		if (!isNumeric(arg) || Integer.parseInt(arg) <= 0) {
-			Chat.sendMessage(sender, "invalid-rule");
+	public static boolean isArgsLengthNotEqualTo(@NotNull CommandSender sender, @NotNull String[] args, int length) {
+		if (args.length != length) {
+			Chat.sendMessage(sender, "cmd");
 			return true;
 		}
 		return false;
 	}
 
-	private static boolean isNumeric(final CharSequence charSequence) {
-		if (isEmpty(charSequence)) {
-			return false;
+	public static boolean isArgsLengthGreaterThan(@NotNull CommandSender sender, @NotNull String[] args, int length) {
+		if (args.length > length) {
+			Chat.sendMessage(sender, "cmd");
+			return true;
 		}
-		final int sequenceSize = charSequence.length();
-		return IntStream.range(0, sequenceSize)
-		                .allMatch(i -> Character.isDigit(charSequence.charAt(i)));
+		return false;
 	}
 
-	private static boolean isEmpty(final CharSequence charSequence) {
-		return charSequence == null || charSequence.length() == 0;
+	public static boolean isNotPermitted(@NotNull CommandSender sender, @NotNull String perm) {
+		if (!sender.hasPermission(perm)) {
+			Chat.sendMessage(sender, "no-perms");
+			return true;
+		}
+		return false;
 	}
 }

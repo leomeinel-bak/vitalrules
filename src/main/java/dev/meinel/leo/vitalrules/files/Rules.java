@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalrules.files;
+package dev.meinel.leo.vitalrules.files;
 
-import com.tamrielnetwork.vitalrules.VitalRules;
+import dev.meinel.leo.vitalrules.VitalRules;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
