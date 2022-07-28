@@ -19,9 +19,10 @@
 package com.tamrielnetwork.vitalrules.utils.commands;
 
 import com.tamrielnetwork.vitalrules.utils.Chat;
-import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.stream.IntStream;
 
 public class CmdSpec {
 
@@ -34,10 +35,23 @@ public class CmdSpec {
 	}
 
 	public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-		if (!StringUtils.isNumeric(arg) || Integer.parseInt(arg) <= 0) {
+		if (!isNumeric(arg) || Integer.parseInt(arg) <= 0) {
 			Chat.sendMessage(sender, "invalid-rule");
 			return true;
 		}
 		return false;
+	}
+
+	private static boolean isNumeric(final CharSequence charSequence) {
+		if (isEmpty(charSequence)) {
+			return false;
+		}
+		final int sequenceSize = charSequence.length();
+		return IntStream.range(0, sequenceSize)
+		                .allMatch(i -> Character.isDigit(charSequence.charAt(i)));
+	}
+
+	private static boolean isEmpty(final CharSequence charSequence) {
+		return charSequence == null || charSequence.length() == 0;
 	}
 }
