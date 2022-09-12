@@ -17,38 +17,38 @@ import org.jetbrains.annotations.NotNull;
 
 public class CmdSpec {
 
-  private CmdSpec() {
-    throw new IllegalStateException("Utility class");
-  }
-
-  public static boolean isInvalidCmd(
-      @NotNull CommandSender sender,
-      @NotNull String arg,
-      @NotNull String perm) {
-    return Cmd.isNotPermitted(sender, perm) || isInvalidNumber(sender, arg);
-  }
-
-  public static boolean isInvalidNumber(
-      @NotNull CommandSender sender,
-      @NotNull String arg) {
-    if (!isNumeric(arg) || Integer.parseInt(arg) <= 0) {
-      Chat.sendMessage(sender, "invalid-rule");
-      return true;
+    private CmdSpec() {
+        throw new IllegalStateException("Utility class");
     }
-    return false;
-  }
 
-  private static boolean isNumeric(final CharSequence charSequence) {
-    if (isEmpty(charSequence)) {
-      return false;
+    public static boolean isInvalidCmd(
+            @NotNull CommandSender sender,
+            @NotNull String arg,
+            @NotNull String perm) {
+        return Cmd.isNotPermitted(sender, perm) || isInvalidNumber(sender, arg);
     }
-    final int sequenceSize = charSequence.length();
-    return IntStream
-        .range(0, sequenceSize)
-        .allMatch(i -> Character.isDigit(charSequence.charAt(i)));
-  }
 
-  private static boolean isEmpty(final CharSequence charSequence) {
-    return charSequence == null || charSequence.length() == 0;
-  }
+    public static boolean isInvalidNumber(
+            @NotNull CommandSender sender,
+            @NotNull String arg) {
+        if (!isNumeric(arg) || Integer.parseInt(arg) <= 0) {
+            Chat.sendMessage(sender, "invalid-rule");
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean isNumeric(final CharSequence charSequence) {
+        if (isEmpty(charSequence)) {
+            return false;
+        }
+        final int sequenceSize = charSequence.length();
+        return IntStream
+                .range(0, sequenceSize)
+                .allMatch(i -> Character.isDigit(charSequence.charAt(i)));
+    }
+
+    private static boolean isEmpty(final CharSequence charSequence) {
+        return charSequence == null || charSequence.length() == 0;
+    }
 }

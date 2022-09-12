@@ -18,23 +18,23 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Rules {
 
-  private final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
-  private final File rulesFile;
-  private final FileConfiguration rulesConf;
+    private final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
+    private final File rulesFile;
+    private final FileConfiguration rulesConf;
 
-  public Rules() {
-    rulesFile = new File(main.getDataFolder(), "rules.yml");
-    saveRulesFile();
-    rulesConf = YamlConfiguration.loadConfiguration(rulesFile);
-  }
-
-  private void saveRulesFile() {
-    if (!rulesFile.exists()) {
-      main.saveResource("rules.yml", false);
+    public Rules() {
+        rulesFile = new File(main.getDataFolder(), "rules.yml");
+        saveRulesFile();
+        rulesConf = YamlConfiguration.loadConfiguration(rulesFile);
     }
-  }
 
-  public FileConfiguration getRulesConf() {
-    return rulesConf;
-  }
+    private void saveRulesFile() {
+        if (!rulesFile.exists()) {
+            main.saveResource("rules.yml", false);
+        }
+    }
+
+    public FileConfiguration getRulesConf() {
+        return rulesConf;
+    }
 }
