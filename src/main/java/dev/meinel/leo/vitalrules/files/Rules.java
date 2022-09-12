@@ -1,49 +1,40 @@
 /*
- * VitalRules is a Spigot Plugin that gives players the ability to see server rules.
- * Copyright © 2022 Leopold Meinel & contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
+ * File: Rules.java
+ * Author: Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2022 Leopold Meinel & contributors
+ * SPDX ID: GPL-3.0-or-later
+ * URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ * -----
  */
 
 package dev.meinel.leo.vitalrules.files;
 
 import dev.meinel.leo.vitalrules.VitalRules;
+import java.io.File;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-
 public class Rules {
 
-	private final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
-	private final File rulesFile;
-	private final FileConfiguration rulesConf;
+  private final VitalRules main = JavaPlugin.getPlugin(VitalRules.class);
+  private final File rulesFile;
+  private final FileConfiguration rulesConf;
 
-	public Rules() {
-		rulesFile = new File(main.getDataFolder(), "rules.yml");
-		saveRulesFile();
-		rulesConf = YamlConfiguration.loadConfiguration(rulesFile);
-	}
+  public Rules() {
+    rulesFile = new File(main.getDataFolder(), "rules.yml");
+    saveRulesFile();
+    rulesConf = YamlConfiguration.loadConfiguration(rulesFile);
+  }
 
-	private void saveRulesFile() {
-		if (!rulesFile.exists()) {
-			main.saveResource("rules.yml", false);
-		}
-	}
+  private void saveRulesFile() {
+    if (!rulesFile.exists()) {
+      main.saveResource("rules.yml", false);
+    }
+  }
 
-	public FileConfiguration getRulesConf() {
-		return rulesConf;
-	}
+  public FileConfiguration getRulesConf() {
+    return rulesConf;
+  }
 }

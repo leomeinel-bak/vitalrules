@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -69,12 +70,12 @@ This plugin is perfect for any server wanting their players to be able to take a
 
 ### Features
 
-* See server rules.
+- See server rules.
 
 ### Built With
 
-* [Gradle 7](https://docs.gradle.org/7.4/release-notes.html)
-* [OpenJDK 17](https://openjdk.java.net/projects/jdk/17/)
+- [Gradle 7](https://docs.gradle.org/7.4/release-notes.html)
+- [OpenJDK 17](https://openjdk.java.net/projects/jdk/17/)
 
 <!-- GETTING STARTED -->
 
@@ -86,8 +87,8 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalrules.rules`
 
-* Command: `/rules <page>`
-* Description: See server rules
+- Command: `/rules <page>`
+- Description: See server rules
 
 ### Configuration - messages.yml
 
@@ -148,30 +149,19 @@ Project Link - [VitalRules](https://github.com/LeoMeinel/VitalRules) - GitHub
 
 ### Acknowledgements
 
-* [README.md - othneildrew](https://github.com/othneildrew/Best-README-Template)
+- [README.md - othneildrew](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalRules?style=for-the-badge
-
 [contributors-url]: https://github.com/LeoMeinel/VitalRules/graphs/contributors
-
 [forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalRules?label=Forks&style=for-the-badge
-
 [forks-url]: https://github.com/LeoMeinel/VitalRules/network/members
-
 [stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalRules?style=for-the-badge
-
 [stars-url]: https://github.com/LeoMeinel/VitalRules/stargazers
-
 [issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalRules?style=for-the-badge
-
 [issues-url]: https://github.com/LeoMeinel/VitalRules/issues
-
 [license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalRules?style=for-the-badge
-
 [license-url]: https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
-
 [quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalRules?style=for-the-badge
-
 [quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalRules
