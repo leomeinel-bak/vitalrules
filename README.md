@@ -11,7 +11,7 @@
 <!--suppress ALL -->
 <br />
 <p align="center">
-  <a href="https://github.com/LeoMeinel/VitalRules">
+  <a href="https://github.com/LeoMeinel/vitalrules">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -20,14 +20,14 @@
   <p align="center">
     See rules on Spigot and Paper
     <br />
-    <a href="https://github.com/LeoMeinel/VitalRules"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/LeoMeinel/vitalrules"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/LeoMeinel/VitalRules">View Demo</a>
+    <a href="https://github.com/LeoMeinel/vitalrules">View Demo</a>
     ·
-    <a href="https://github.com/LeoMeinel/VitalRules/issues">Report Bug</a>
+    <a href="https://github.com/LeoMeinel/vitalrules/issues">Report Bug</a>
     ·
-    <a href="https://github.com/LeoMeinel/VitalRules/issues">Request Feature</a>
+    <a href="https://github.com/LeoMeinel/vitalrules/issues">Request Feature</a>
   </p>
 
 <!-- ABOUT THE PROJECT -->
@@ -87,7 +87,7 @@ invalid-rule: "&cInvalid rule!"
 
 ## Roadmap
 
-See the [open issues](https://github.com/LeoMeinel/VitalRules/issues) for a list of proposed features (and known
+See the [open issues](https://github.com/LeoMeinel/vitalrules/issues) for a list of proposed features (and known
 issues).
 
 <!-- CONTRIBUTING -->
@@ -115,7 +115,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 Leopold Meinel - [leo@meinel.dev](mailto:leo@meinel.dev) - eMail
 
-Project Link - [VitalRules](https://github.com/LeoMeinel/VitalRules) - GitHub
+Project Link - [VitalRules](https://github.com/LeoMeinel/vitalrules) - GitHub
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -125,15 +125,15 @@ Project Link - [VitalRules](https://github.com/LeoMeinel/VitalRules) - GitHub
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalRules?style=for-the-badge
-[contributors-url]: https://github.com/LeoMeinel/VitalRules/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalRules?label=Forks&style=for-the-badge
-[forks-url]: https://github.com/LeoMeinel/VitalRules/network/members
-[stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalRules?style=for-the-badge
-[stars-url]: https://github.com/LeoMeinel/VitalRules/stargazers
-[issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalRules?style=for-the-badge
-[issues-url]: https://github.com/LeoMeinel/VitalRules/issues
-[license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalRules?style=for-the-badge
-[license-url]: https://github.com/LeoMeinel/VitalRules/blob/main/LICENSE
-[quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalRules?style=for-the-badge
-[quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalRules
+[contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/vitalrules?style=for-the-badge
+[contributors-url]: https://github.com/LeoMeinel/vitalrules/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/LeoMeinel/vitalrules?label=Forks&style=for-the-badge
+[forks-url]: https://github.com/LeoMeinel/vitalrules/network/members
+[stars-shield]: https://img.shields.io/github/stars/LeoMeinel/vitalrules?style=for-the-badge
+[stars-url]: https://github.com/LeoMeinel/vitalrules/stargazers
+[issues-shield]: https://img.shields.io/github/issues/LeoMeinel/vitalrules?style=for-the-badge
+[issues-url]: https://github.com/LeoMeinel/vitalrules/issues
+[license-shield]: https://img.shields.io/github/license/LeoMeinel/vitalrules?style=for-the-badge
+[license-url]: https://github.com/LeoMeinel/vitalrules/blob/main/LICENSE
+[quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/vitalrules?style=for-the-badge
+[quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/vitalrules
