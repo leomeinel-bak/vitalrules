@@ -65,7 +65,6 @@ To get the plugin running on your server follow these simple steps.
 ### Configuration - messages.yml
 
 ```yaml
-cmd: "&fUsage: &b/rules <page>"
 no-perms: "&7You don't have enough permissions!"
 invalid-rule: "&cInvalid rule!"
 ```
