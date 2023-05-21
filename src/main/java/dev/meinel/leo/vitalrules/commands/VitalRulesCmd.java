@@ -26,7 +26,7 @@ public class VitalRulesCmd implements CommandExecutor {
         if (Cmd.isArgsLengthGreaterThan(sender, args, 1)) {
             return false;
         }
-        if (Cmd.isArgsLengthNotEqualTo(sender, args, 0)) {
+        if (!Cmd.isArgsLengthEqualTo(sender, args, 0)) {
             doRules(sender, args[0]);
             return true;
         }
@@ -43,7 +43,7 @@ public class VitalRulesCmd implements CommandExecutor {
     }
 
     private void doRules(@NotNull CommandSender sender) {
-        if (Cmd.isNotPermitted(sender, "vitalrules.rules")) {
+        if (!Cmd.isPermitted(sender, "vitalrules.rules")) {
             return;
         }
         Chat.sendMessage(sender, 1);

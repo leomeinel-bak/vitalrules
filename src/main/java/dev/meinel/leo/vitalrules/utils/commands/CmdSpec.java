@@ -23,7 +23,7 @@ public class CmdSpec {
 
     public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg,
             @NotNull String perm) {
-        return Cmd.isNotPermitted(sender, perm) || isInvalidNumber(sender, arg);
+        return !Cmd.isPermitted(sender, perm) || isInvalidNumber(sender, arg);
     }
 
     public static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
