@@ -61,6 +61,7 @@ public class Chat {
         return messagesList.get(page - 1);
     }
 
+    // FIXME: Replace deprecated org.bukkit.ChatColor with alternative
     public static String replaceColors(@NotNull String string) {
         return ChatColor.translateAlternateColorCodes('&', string);
     }
